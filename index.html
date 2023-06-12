@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Zone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/icon-website.png" type="image/png">
+  <script defer src="app.js"></script>
+  <script defer src="bootstrap.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+  <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://kit.fontawesome.com/80b06b77b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-styling sticky-top">
+    <div class="container-lg nav-container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="logo">
+        SOCIAL ZONE
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <span class="search-bar-nav">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="form-control navbar-input-styling" type="search" placeholder="Search" aria-label="Search">
+        </span>
+        <div class="navbar-icons-left">
+          <div class="icons icon-messages" title="Messages"></div>
+          <div class="icons icon-notifications" title="Notifications"></div>
+          <div class="icons icon-profile" title="Your Profile"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Main -->
+  <main class="container-lg pt-4">
+    <div class="row">
+      <section class="profile-and-groups-card col col-lg-3 col-md-3 col-sm-12">
+        <div class="card">
+
+          <div class="card-body profile-overview">
+            <div class="icons icon-profile" title="Your Profile"></div>
+            <h5 class="card-title text-center text-light-emphasis">Welcome, Owais!</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <h6>Friends</h6>
+              <p><i class="fa-solid fa-user-plus"></i> Add your friends</p>
+            </li>
+            <li class="list-group-item"><i class="fa-solid fa-bookmark"></i> My Items</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link"><i class="fa-solid fa-user-group"></i> Groups</a>
+          </div>
+        </div>
+        <br>
+        <div class="card extra-info-card">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Recent events</li>
+            <li class="list-group-item">Try premium</li>
+          </ul>
+          <div class="card-footer">
+            Discover more
+          </div>
+        </div>
+      </section>
+      <section class="main-posting-section col col-lg-6 col-md-9 col-sm-12">
+        <div class="card">
+          <div class="card-body create-post-wrapper">
+            <div class="icons icon-profile " title="Your Profile"></div>
+            <button id="create-post">Create a Post</button>
+          </div>
+        </div>
+        <br>
+        <div class="posting-area" id="posting-area">
+
+          <div class="card post" id="post">
+            <div class="card-body">
+              <div class="post-header">
+                <span>
+                  <div class="icons icon-profile" title="Your Profile"></div>
+                </span>
+                <span>
+                  <h6>Owais raza</h6>
+                  <p><span id="post-time">2hr ago</span> . <i class="fa-solid fa-earth-asia"></i></p>
+                </span>
+                <button class="delete-post" title="Like the project ?"><i class="fa-solid fa-ellipsis"></i></button>
+              </div>
+            </div>
+            <div class="post-image-section example-post-1"></div>
+            <div class="card-footer post-footer">
+              <button><i class="fa-regular fa-thumbs-up"></i>&nbsp; Like</button>
+              <button><i class="fa-regular fa-comment-dots"></i>&nbsp; Comment</button>
+              <button><i class="fa-solid fa-retweet"></i>&nbsp; Repost</button>
+              <button><i class="fa-regular fa-share-from-square"></i>&nbsp; Share</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="people-to-follow col col-lg-3 col-md-9 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            Recommended for you
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item recommended-list-item">
+              <div class="icons rec-pfp-1" title="Your Profile"></div>
+              <h6>Buisness man</h6>
+              <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="list-group-item recommended-list-item">
+              <div class="icons rec-pfp-2" title="Your Profile"></div>
+              <h6>Fashion designer</h6>
+              <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="list-group-item recommended-list-item">
+              <div class="icons rec-pfp-3" title="Your Profile"></div>
+              <h6>Influencer</h6>
+              <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="list-group-item recommended-list-item">
+              <div class="icons rec-pfp-4" title="Your Profile"></div>
+              <h6>Astronaut</h6>
+              <i class="fa-solid fa-plus"></i>
+            </li>
+          </ul>
+        </div>
+        <br>
+        <div class="card credits">
+          <div class="card-body">
+            <span>About</span> &nbsp; <span>Accesibilty</span> &nbsp; <span>Help Center</span> &nbsp;
+            <span>Privacy terms and services</span> &nbsp; <span>Ad choices</span> &nbsp; <span>Advertising</span>
+            &nbsp; <span>More</span>
+            <br>
+            <p>Made by Owais Raza © 2023</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="post-modal-bg" id="post-modal">
+    <div class="post-modal container">
+      <div class="card">
+        <div class="card-header">
+          <h5>Create Post</h5>
+          <button id="remove-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="card-body">
+          <span class="post-modal-header">
+            <div class="icons icon-profile" title="Your Profile"></div>
+            <h5>Owais Raza</h5>
+          </span>
+          <textarea class="display-post-preview" id="post-preview" placeholder="What's on your mind?"
+            maxlength="40"></textarea>
+          <div class="bg-changer-wrapper">
+            <button class="bg-btn" id="bg-changer"></button>
+            <span class="more-bg-options" id="more-bg-options">
+              <button class="bg-btn" id="bg-1"></button>
+              <button class="bg-btn" id="bg-2"></button>
+              <button class="bg-btn" id="bg-3"></button>
+              <button class="bg-btn" id="bg-4"></button>
+              <button class="bg-btn" id="bg-5"></button>
+              <button class="bg-btn" id="bg-6"></button>
+              <button class="bg-btn" id="bg-7"></button>
+              <button class="bg-btn" id="bg-8"></button>
+              <button class="bg-btn" id="bg-9"></button>
+              <button class="bg-btn" id="bg-10"></button>
+            </span>
+          </div>
+          <button class="post-it-btn btn" id="post-it-btn">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
